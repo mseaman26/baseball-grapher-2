@@ -1,0 +1,53 @@
+/* styles/LoadingScreen.module.css */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.loader {
+    position: absolute;
+    animation: spin .5s linear infinite;
+
+}
+
+.ball {
+    position: absolute;
+    animation: moveAround 1.5s linear infinite;
+}
+
+.spin {
+    animation: spin 0.3s linear infinite;
+}
+.throw {
+    animation: throw 2s linear infinite; /* Animation to simulate throw */
+}
+
+@keyframes moveAround {
+    0% {
+        transform: rotate(0deg) translateX(40px);
+    }
+    100% {
+        transform: rotate(360deg) translateX(40px);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes throw {
+    0% {
+        transform: scale(1);
+    }
+    99% {
+        transform: scale(20); /* Smoothly scale up to 1.5 times */
+    }
+    
+}

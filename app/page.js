@@ -1,17 +1,11 @@
 'use client'
 import React, { useEffect, useRef, useState } from "react";
 import Chart from "chart.js/auto";
-// import { useQuery, useMutation } from "@apollo/client";
-// import {
-//   GET_SEASON,
-//   GET_CURRENT_SEASON,
-//   GET_CURRENT_SEASONS,
-// } from "../utils/queries";
-// import "chartjs-plugin-zoom";
 import { chooseColor } from "../utils/chooseColor";
-// import "../App.css";
 import {monthStartIndexes}from '../utils/helpers'
 import { getSeasonsAPI } from "@/utils/APIHelpers";
+import LoadingScreen from "@/components/LoadingScreen";
+
 
 const LineGraph = () => {
   if(typeof window !== 'undefined'){
@@ -92,12 +86,6 @@ const LineGraph = () => {
       ]);
     };
 
-    // const { loading, data } = useQuery(GET_CURRENT_SEASONS, {
-    //   variables: {
-    //     teamNames: teamNames,
-    //   },
-    //   fetchPolicy: "cache-and-network", //gets most updated data
-    // });
     let seasonsData = undefined
 
 
@@ -472,12 +460,12 @@ const LineGraph = () => {
             </div>
           )}
           {loading ? (
-            <>loading</>
+            <LoadingScreen />
           ) : (
             <></>
           )}
           
-          {graphWidth > 500 ? <canvas
+          {graphWidth > 500 && !loading ? <canvas
               ref={chartRef}
               className="chart_canvas"
               style={{ width: "100%", visibility: graphDisplay, overflow: 'a' }}
