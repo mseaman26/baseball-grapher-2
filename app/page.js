@@ -462,7 +462,7 @@ const LineGraph = () => {
             <></>
           ) : (
             <div className="row d-flex justify-content-between mt-2" >
-            test
+            
               {seasons.map((season) => (
                 <div className="col-2" style={{'margin': '0px', padding: '0px'}}>
                 <div style={{'background-color': chooseColor(season.teamName), 'height': borderWidth * 2, width: '100%'}}></div>
@@ -483,7 +483,7 @@ const LineGraph = () => {
               style={{ width: "100%", visibility: graphDisplay, overflow: 'a' }}
             />
           :
-          <h2 style={{textAlign: 'center', color: 'green'}}>{`*Turn phone sideways or widen screen to view graphs`}</h2>
+          !loading && data.length > 0 && <h2 style={{textAlign: 'center', color: 'green'}}>{`*Turn phone sideways or widen screen to view graphs`}</h2>
           }
         </div>
       </div>}
