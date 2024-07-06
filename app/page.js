@@ -109,11 +109,12 @@ const LineGraph = () => {
     useEffect(() => {
       const fetchSeasonsData = async () => {
         if (teamNames.length > 0) {
-          
+          setLoading(true)
           seasonsData = await getSeasonsAPI(teamNames); // Await the API call
           console.log('seasonsData: ', seasonsData)
           setData(prior => seasonsData.data);
           setSeasons(seasonsData.data);
+          setLoading(false)
         }
       };
     
