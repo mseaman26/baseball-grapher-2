@@ -99,6 +99,15 @@ const scrapeCurrentSeason = async (teamName) => {
 
         
             } 
+            //all star break. had to find the day (116) manually and add four days off (8 ticks)
+            if(currentDay === 116){
+                for(let i = 0; i < 8; i++){
+                    currentDay += .5
+                    labels.push(currentDay)
+                    standings.push(currentStanding)
+                    
+                }
+            }
         });
 
     return {
