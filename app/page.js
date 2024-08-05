@@ -29,7 +29,7 @@ const LineGraph = () => {
     const reRender = () => {
 
     }
-    const divider = 180 //raise this to lower line width of the graphs
+    const divider = 200 //raise this to lower line width of the graphs
 
     const handleNLWEST = () => {
       setTeamNames([
