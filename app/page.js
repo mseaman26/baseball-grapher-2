@@ -185,7 +185,7 @@ const LineGraph = () => {
         const ctx = chartRef?.current?.getContext("2d");
         //aspect ratio can be adjusted here by changing the final multiplier
         let aspecRatio = null
-        aspecRatio = (window?.innerWidth - 100)/(aspecheight * (window?.innerWidth - 100)) * 120
+        aspecRatio = (window?.innerWidth - 100)/(aspecheight * (window?.innerWidth - 100)) * 150
 
         
         console.log('aspect ratio: ', aspecRatio)
@@ -221,6 +221,7 @@ const LineGraph = () => {
                     // if(index === 1){
                     //   return 'March'
                     // }
+                    console.log('INDEX: ', index)
                     if(index === 0){
                       return 'March'
                     }
@@ -294,13 +295,19 @@ const LineGraph = () => {
                         return ''
                       }
                     }
+                    if(index === 193){
+                      return 'October'
+                    }
+                    if(index > 193){
+                      return ''
+                    }
                     
 
                   
 
-                    if (labels[index]) {
-                      return labels[index] * 2;
-                    }
+                    // if (labels[index]) {
+                    //   return labels[index] * 2;
+                    // }
                   }
                 },
                 grid: {

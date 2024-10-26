@@ -16,6 +16,9 @@ const scrapeCurrentSeason = async (teamName) => {
         
         //checking each day
         $('h3').each(function(i, element) {
+            if(i > 192){
+                return
+            }
             const dailyGames = $(this).parent().find('.game');
             let todaysTeamGames = []
             let doubleHeader = false
