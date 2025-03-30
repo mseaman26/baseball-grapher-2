@@ -60,7 +60,7 @@ const LineGraph = () => {
     };
     const handleALWEST = () => {
       setTeamNames([
-        `Oakland Athletics`,
+        `Athletics`,
         `Los Angeles Angels`,
         `Texas Rangers`,
         `Seattle Mariners`,

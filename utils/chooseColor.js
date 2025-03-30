@@ -30,7 +30,7 @@ const chooseColor = (teamName) => {
             return `rgb(244, 11, 61)`
         case `Miami Marlins`:
             return `rgb(4, 130, 204)`
-        case `Oakland Athletics`:
+        case `Athletics`:
             return `rgb(5, 107, 39)`
         case `Los Angeles Angels`:
             return `rgb(199, 15, 39)`
