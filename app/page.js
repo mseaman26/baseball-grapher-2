@@ -233,12 +233,12 @@ const LineGraph = () => {
                       }
                     
                     }
-                    if(index === 11){
+                    if(index === 14){
                       return 'April'
                     }
-                    if(index < 41 && index > 11){
-                      if((index-11)%5 === 0 && index < 40){
-                        return index - 11
+                    if(index < 44 && index > 14){
+                      if((index-14)%5 === 0 && index < 44){
+                        return index - 14
                       }else{
                         return ''
                       }
