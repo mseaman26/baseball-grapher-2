@@ -225,7 +225,7 @@ const LineGraph = () => {
                     if(index === 0){
                       return 'March'
                     }
-                    if(index < 14 && index > 0){
+                    if(index < 13 && index > 0){
                       if(index%5 === 0 && index < 10){
                         return index + 18
                       }else{
@@ -233,72 +233,72 @@ const LineGraph = () => {
                       }
                     
                     }
-                    if(index === 14){
+                    if(index === 13){
                       return 'April'
                     }
-                    if(index < 44 && index > 14){
-                      if((index-14)%5 === 0 && index < 44){
-                        return index - 14
+                    if(index < 43 && index > 13){
+                      if((index-13)%5 === 0 && index < 43){
+                        return index - 13
                       }else{
                         return ''
                       }
                     }
                     
-                    if(index === 41){
+                    if(index === 43){
                       return 'May'
                     }
                     
-                    if(index < 72 && index > 41){
-                      if((index - 41)%5 === 0 && index < 70){
-                        return index - 41
+                    if(index < 74 && index > 43){
+                      if((index - 43)%5 === 0 && index < 74){
+                        return index - 43
                       }else{
                         return ''
                       }
                     }
-                    if(index === 72){
+                    if(index === 74){
                       return 'June'
                     }
-                    if(index < 102 && index > 72){
-                      if((index - 72)%5 === 0 && index < 100){
-                        return index - 72
+                    if(index < 104 && index > 74){
+                      if((index - 74)%5 === 0 && index < 104){
+                        return index - 74
                       }else{
                         return ''
                       }
                     }
-                    if(index === 102){
+                    if(index === 104){
                       return 'July'
                     }
-                    if(index < 133 && index > 102){
-                      if((index - 102)%5 === 0 && index < 130){
-                        return index - 102
+                    if(index < 133 && index > 104){
+                      if((index - 104)%5 === 0 && index < 135){
+                        return index - 104
                       }else{
                         return ''
                       }
                     }
-                    if(index === 133){
+                    if(index === 135){
                       return 'August'
                     }
-                    if(index < 163 && index > 133){
-                      if((index - 133)%5 === 0 && index < 160){
-                        return index - 133
+                    if(index < 166 && index > 135){
+                      if((index - 135)%5 === 0 && index < 166){
+                        return index - 135
                       }else{
                         return ''
                       }
                     }
-                    if(index === 163){
+                    if(index === 166){
                       return 'September'
                     }
-                    if(index < 194 && index > 163){
-                      if((index - 163)%5 === 0 && index < 190){
-                        return index - 163
+                    if(index < 196 && index > 166){
+                      if((index - 166)%5 === 0 && index < 196){
+                        return index - 166
                       }else{
                         return ''
                       }
                     }
-                    if(index === 193){
+                    if(index === 196){
                       return 'October'
                     }
-                    if(index > 193){
+                    if(index > 196){
                       return ''
                     }
                     
