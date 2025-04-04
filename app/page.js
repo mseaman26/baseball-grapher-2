@@ -29,7 +29,7 @@ const LineGraph = () => {
     const reRender = () => {
 
     }
-    const divider = 100 //raise this to lower line thickness of the graphs
+    const divider = 80 //raise this to lower line thickness of the graphs
 
     const handleNLWEST = () => {
       setTeamNames([
@@ -185,7 +185,7 @@ const LineGraph = () => {
         const ctx = chartRef?.current?.getContext("2d");
         //aspect ratio can be adjusted here by changing the final multiplier
         let aspecRatio = null
-        aspecRatio = (window?.innerWidth - 100)/(aspecheight * (window?.innerWidth - 100)) * 10
+        aspecRatio = (window?.innerWidth - 100)/(aspecheight * (window?.innerWidth - 100)) * 15
 
         
         console.log('aspect ratio: ', aspecRatio)
@@ -225,7 +225,7 @@ const LineGraph = () => {
                     if(index === 0){
                       return 'March'
                     }
-                    if(index < 11 && index > 0){
+                    if(index < 14 && index > 0){
                       if(index%5 === 0 && index < 10){
                         return index + 18
                       }else{
@@ -314,6 +314,7 @@ const LineGraph = () => {
                   display: true,
                   drawBorder: false,
                   color: (context) => {
+                    console.log('context.tick.value: ', context.tick.value)
                     return monthStartIndexes.includes(context.tick.value)
                       ? "black"
                       : "rgba(0, 0, 0, 0.1)";
