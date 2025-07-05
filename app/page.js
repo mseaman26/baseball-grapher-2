@@ -29,7 +29,7 @@ const LineGraph = () => {
     const reRender = () => {
 
     }
-    const divider = 100 //raise this to lower line thickness of the graphs
+    const divider = 150 //raise this to lower line thickness of the graphs
 
     const handleNLWEST = () => {
       setTeamNames([
@@ -185,7 +185,7 @@ const LineGraph = () => {
         const ctx = chartRef?.current?.getContext("2d");
         //aspect ratio can be adjusted here by changing the final multiplier
         let aspecRatio = null
-        aspecRatio = (window?.innerWidth - 100)/(aspecheight * (window?.innerWidth - 100)) * 70
+        aspecRatio = (window?.innerWidth - 100)/(aspecheight * (window?.innerWidth - 100)) * 90
 
         
         console.log('aspect ratio: ', aspecRatio)
