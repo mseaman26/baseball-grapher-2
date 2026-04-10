@@ -29,7 +29,7 @@ const LineGraph = () => {
     const reRender = () => {
 
     }
-    const divider = 150 //raise this to lower line thickness of the graphs
+    const divider = 75 //raise this to lower line thickness of the graphs
 
     const handleNLWEST = () => {
       setTeamNames([
@@ -183,9 +183,9 @@ const LineGraph = () => {
         console.log('max, min, aspheight, aspwidth',dataMax, dataMin, aspecheight, aspecWidth)
 
         const ctx = chartRef?.current?.getContext("2d");
-        //aspect ratio can be adjusted here by changing the final multiplier
+        //t ratio can be adjusted here by changing the final multiplier
         let aspecRatio = null
-        aspecRatio = (window?.innerWidth - 100)/(aspecheight * (window?.innerWidth - 100)) * 110
+        aspecRatio = (window?.innerWidth - 100)/(aspecheight * (window?.innerWidth - 100)) * 15
 
         
         console.log('aspect ratio: ', aspecRatio)
@@ -225,80 +225,80 @@ const LineGraph = () => {
                     if(index === 0){
                       return 'March'
                     }
-                    if(index < 13 && index > 0){
-                      if((index + 18)%5 === 0 && index < 10){
-                        return index + 18
+                    if(index < 7 && index > 0){
+                      if((index + 23)%5 === 0 && index < 7){
+                        return index + 24
                       }else{
                         return ''
                       }
                     
                     }
-                    if(index === 13){
+                    if(index === 7){
                       return 'April'
                     }
-                    if(index < 43 && index > 13){
-                      if((index-13)%5 === 0 && index < 43){
-                        return index - 13
+                    if(index < 37 && index > 7){
+                      if((index-7)%5 === 0 && index < 37){
+                        return index - 7
                       }else{
                         return ''
                       }
                     }
                     
-                    if(index === 43){
+                    if(index === 37){
                       return 'May'
                     }
                     
-                    if(index < 74 && index > 43){
-                      if((index - 43)%5 === 0 && index < 74){
-                        return index - 43
+                    if(index < 68 && index > 37){
+                      if((index - 37)%5 === 0 && index < 68){
+                        return index - 37
                       }else{
                         return ''
                       }
                     }
-                    if(index === 74){
+                    if(index === 68){
                       return 'June'
                     }
-                    if(index < 104 && index > 74){
-                      if((index - 74)%5 === 0 && index < 104){
-                        return index - 74
+                    if(index < 98 && index > 68){
+                      if((index - 68)%5 === 0 && index < 98){
+                        return index - 68
                       }else{
                         return ''
                       }
                     }
-                    if(index === 104){
+                    if(index === 98){
                       return 'July'
                     }
-                    if(index < 133 && index > 104){
-                      if((index - 104)%5 === 0 && index < 135){
-                        return index - 104
+                    if(index < 129 && index > 98){
+                      if((index - 98)%5 === 0 && index < 129){
+                        return index - 98
                       }else{
                         return ''
                       }
                     }
-                    if(index === 135){
+                    if(index === 129){
                       return 'August'
                     }
-                    if(index < 166 && index > 135){
-                      if((index - 135)%5 === 0 && index < 166){
-                        return index - 135
+                    if(index < 160 && index > 129){
+                      if((index - 129)%5 === 0 && index < 160){
+                        return index - 129
                       }else{
                         return ''
                       }
                     }
-                    if(index === 166){
+                    if(index === 160){
                       return 'September'
                     }
-                    if(index < 196 && index > 166){
-                      if((index - 166)%5 === 0 && index < 196){
-                        return index - 166
+                    if(index < 190 && index > 160){
+                      if((index - 160)%5 === 0 && index < 190){
+                        return index - 160
                       }else{
                         return ''
                       }
                     }
-                    if(index === 196){
+                    if(index === 190){
                       return 'October'
                     }
-                    if(index > 196){
+                    if(index > 190){
                       return ''
                     }
                     

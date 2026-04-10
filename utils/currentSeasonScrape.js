@@ -1,6 +1,6 @@
 const cheerio = require('cheerio')
 
-const mlbURL = 'https://www.baseball-reference.com/leagues/majors/2025-schedule.shtml'
+const mlbURL = 'https://www.baseball-reference.com/leagues/majors/2026-schedule.shtml'
 
 const scrapeCurrentSeason = async (teamName) => {
     try{
