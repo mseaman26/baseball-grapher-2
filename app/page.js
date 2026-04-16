@@ -185,7 +185,7 @@ const LineGraph = () => {
         const ctx = chartRef?.current?.getContext("2d");
         //t ratio can be adjusted here by changing the final multiplier
         let aspecRatio = null
-        aspecRatio = (window?.innerWidth - 100)/(aspecheight * (window?.innerWidth - 100)) * 15
+        aspecRatio = (window?.innerWidth - 100)/(aspecheight * (window?.innerWidth - 100)) * 20
 
         
         console.log('aspect ratio: ', aspecRatio)
